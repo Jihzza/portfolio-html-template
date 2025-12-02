@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio pessoal de Maria Silva - Desenvolvedora Web">
+    <title>Maria Silva | Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts - Fonte personalizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- =============================================
+         HEADER - Cabeçalho com navegação
+         Elemento semântico: <header>
+         Usa Flexbox para alinhar logo e navegação
+    ============================================= -->
+    <header class="header">
+        <div class="container header__content">
+            <!-- Logo / Nome -->
+            <a href="#" class="header__logo">
+                <span class="logo__accent">M</span>aria Silva
+            </a>
+            
+            <!-- Navegação Principal - Elemento semântico: <nav> -->
+            <nav class="header__nav" aria-label="Navegação principal">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#sobre" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#competencias" class="nav__link">Competências</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projetos" class="nav__link">Projetos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contacto" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Botão do menu mobile -->
+            <button class="header__menu-btn" aria-label="Abrir menu" aria-expanded="false">
+                <span class="menu-btn__line"></span>
+                <span class="menu-btn__line"></span>
+                <span class="menu-btn__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- =============================================
+         MAIN - Conteúdo principal da página
+         Elemento semântico: <main>
+    ============================================= -->
+    <main>
+        <!-- =============================================
+             HERO SECTION - Secção de destaque inicial
+             Elemento semântico: <section>
+             Usa Flexbox para centralizar conteúdo
+        ============================================= -->
+        <section class="hero" aria-label="Introdução">
+            <div class="container hero__content">
+                <div class="hero__text">
+                    <p class="hero__greeting">Olá, eu sou</p>
+                    <h1 class="hero__title">Maria Silva</h1>
+                    <p class="hero__subtitle">Desenvolvedora Web & Designer</p>
+                    <p class="hero__description">
+                        Transformo ideias em experiências digitais memoráveis. 
+                        Especializada em criar websites bonitos, funcionais e acessíveis.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
+                        <a href="#contacto" class="btn btn--secondary">Contactar</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <!-- Imagem decorativa com formas geométricas -->
+                    <div class="hero__shape hero__shape--1"></div>
+                    <div class="hero__shape hero__shape--2"></div>
+                    <div class="hero__avatar">
+                        <span class="avatar__initials">MS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             SOBRE MIM - About Section
+             Elemento semântico: <section>
+             Usa Flexbox para layout de duas colunas
+        ============================================= -->
+        <section id="sobre" class="about">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Sobre Mim</h2>
+                    <p class="section__subtitle">Conhece um pouco da minha história</p>
+                </header>
+                
+                <div class="about__content">
+                    <div class="about__image">
+                        <div class="about__photo">
+                            <span class="photo__placeholder">📷</span>
+                        </div>
+                        <div class="about__decoration"></div>
+                    </div>
+                    
+                    <div class="about__text">
+                        <h3 class="about__heading">Uma paixão por criar</h3>
+                        <p class="about__paragraph">
+                            Comecei a minha jornada no mundo da tecnologia há 3 anos, 
+                            quando descobri a magia de transformar código em experiências visuais.
+                        </p>
+                        <p class="about__paragraph">
+                            Desde então, tenho vindo a aperfeiçoar as minhas competências em 
+                            HTML, CSS e JavaScript, sempre com foco na criação de interfaces 
+                            intuitivas e acessíveis.
+                        </p>
+                        <p class="about__paragraph">
+                            Quando não estou a programar, podes encontrar-me a explorar 
+                            novas tendências de design, a ler sobre UX ou a tomar café 
+                            enquanto planeio o próximo projeto.
+                        </p>
+                        
+                        <!-- Lista de dados pessoais -->
+                        <ul class="about__details">
+                            <li class="about__detail">
+                                <span class="detail__label">Nome:</span>
+                                <span class="detail__value">Maria Silva</span>
+                            </li>
+                            <li class="about__detail">
+                                <span class="detail__label">Localização:</span>
+                                <span class="detail__value">Lisboa, Portugal</span>
+                            </li>
+                            <li class="about__detail">
+                                <span class="detail__label">Email:</span>
+                                <span class="detail__value">maria@exemplo.pt</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             COMPETÊNCIAS - Skills Section
+             Elemento semântico: <section>
+             Usa Flexbox para os cards de competências
+        ============================================= -->
+        <section id="competencias" class="skills">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Competências</h2>
+                    <p class="section__subtitle">Tecnologias e ferramentas que domino</p>
+                </header>
+
+                <!-- Cards de competências usando Flexbox -->
+                <div class="skills__grid">
+                    <!-- Card HTML -->
+                    <article class="skill-card">
+                        <div class="skill-card__icon">
+                            <span>🌐</span>
+                        </div>
+                        <h3 class="skill-card__title">HTML5</h3>
+                        <p class="skill-card__description">
+                            Estruturação semântica de páginas web com foco em 
+                            acessibilidade e SEO.
+                        </p>
+                        <div class="skill-card__level">
+                            <span class="level__label">Nível</span>
+                            <div class="level__bar">
+                                <div class="level__fill" style="--level: 90%"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card CSS -->
+                    <article class="skill-card">
+                        <div class="skill-card__icon">
+                            <span>🎨</span>
+                        </div>
+                        <h3 class="skill-card__title">CSS3</h3>
+                        <p class="skill-card__description">
+                            Estilos modernos com Flexbox, Grid, animações e 
+                            design responsivo.
+                        </p>
+                        <div class="skill-card__level">
+                            <span class="level__label">Nível</span>
+                            <div class="level__bar">
+                                <div class="level__fill" style="--level: 85%"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card JavaScript -->
+                    <article class="skill-card">
+                        <div class="skill-card__icon">
+                            <span>⚡</span>
+                        </div>
+                        <h3 class="skill-card__title">JavaScript</h3>
+                        <p class="skill-card__description">
+                            Interatividade e dinamismo com JavaScript moderno 
+                            e boas práticas.
+                        </p>
+                        <div class="skill-card__level">
+                            <span class="level__label">Nível</span>
+                            <div class="level__bar">
+                                <div class="level__fill" style="--level: 70%"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card Design -->
+                    <article class="skill-card">
+                        <div class="skill-card__icon">
+                            <span>✏️</span>
+                        </div>
+                        <h3 class="skill-card__title">UI/UX Design</h3>
+                        <p class="skill-card__description">
+                            Criação de interfaces intuitivas centradas no 
+                            utilizador.
+                        </p>
+                        <div class="skill-card__level">
+                            <span class="level__label">Nível</span>
+                            <div class="level__bar">
+                                <div class="level__fill" style="--level: 75%"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             PROJETOS - Portfolio Section
+             Elemento semântico: <section>
+             Usa CSS Grid para layout da galeria
+        ============================================= -->
+        <section id="projetos" class="projects">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Projetos</h2>
+                    <p class="section__subtitle">Alguns dos meus trabalhos recentes</p>
+                </header>
+
+                <!-- Galeria de projetos usando CSS Grid -->
+                <div class="projects__grid">
+                    <!-- Projeto 1 - Grande -->
+                    <article class="project-card project-card--featured">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder">
+                                <span>🛒</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <span class="project-card__category">E-commerce</span>
+                            <h3 class="project-card__title">Loja Online ModaViva</h3>
+                            <p class="project-card__description">
+                                Website completo de e-commerce com catálogo de produtos, 
+                                carrinho de compras e sistema de pagamentos.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <a href="#" class="project-card__link">Ver Projeto →</a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder">
+                                <span>🍽️</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <span class="project-card__category">Restaurante</span>
+                            <h3 class="project-card__title">Sabores da Terra</h3>
+                            <p class="project-card__description">
+                                Website para restaurante com menu interativo e sistema de reservas.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <a href="#" class="project-card__link">Ver Projeto →</a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder">
+                                <span>📱</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <span class="project-card__category">App Landing</span>
+                            <h3 class="project-card__title">FitTrack App</h3>
+                            <p class="project-card__description">
+                                Landing page para aplicação de fitness com animações suaves.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <a href="#" class="project-card__link">Ver Projeto →</a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 4 -->
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder">
+                                <span>🎵</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <span class="project-card__category">Entretenimento</span>
+                            <h3 class="project-card__title">SoundWave</h3>
+                            <p class="project-card__description">
+                                Interface de streaming de música com design moderno e intuitivo.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <a href="#" class="project-card__link">Ver Projeto →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             CONTACTO - Contact Section
+             Elemento semântico: <section>
+             Usa Flexbox para o formulário
+        ============================================= -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Contacto</h2>
+                    <p class="section__subtitle">Vamos trabalhar juntos?</p>
+                </header>
+
+                <div class="contact__content">
+                    <!-- Informações de contacto -->
+                    <div class="contact__info">
+                        <h3 class="contact__heading">Entra em contacto</h3>
+                        <p class="contact__text">
+                            Estou sempre aberta a novos projetos e oportunidades. 
+                            Não hesites em contactar-me!
+                        </p>
+                        
+                        <ul class="contact__list">
+                            <li class="contact__item">
+                                <span class="contact__icon">📧</span>
+                                <div class="contact__details">
+                                    <span class="contact__label">Email</span>
+                                    <a href="mailto:maria@exemplo.pt" class="contact__value">
+                                        maria@exemplo.pt
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="contact__item">
+                                <span class="contact__icon">📍</span>
+                                <div class="contact__details">
+                                    <span class="contact__label">Localização</span>
+                                    <span class="contact__value">Lisboa, Portugal</span>
+                                </div>
+                            </li>
+                            <li class="contact__item">
+                                <span class="contact__icon">💼</span>
+                                <div class="contact__details">
+                                    <span class="contact__label">LinkedIn</span>
+                                    <a href="#" class="contact__value">
+                                        /in/mariasilva
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Formulário de contacto -->
+                    <form class="contact__form" action="#" method="POST">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Nome</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form__input" 
+                                placeholder="O teu nome"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form__input" 
+                                placeholder="teu@email.com"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="subject" class="form__label">Assunto</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="form__input" 
+                                placeholder="Qual é o assunto?"
+                            >
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Mensagem</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form__textarea" 
+                                placeholder="Escreve a tua mensagem aqui..."
+                                rows="5"
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =============================================
+         FOOTER - Rodapé da página
+         Elemento semântico: <footer>
+         Usa Flexbox para organizar o conteúdo
+    ============================================= -->
+    <footer class="footer">
+        <div class="container footer__content">
+            <div class="footer__brand">
+                <a href="#" class="footer__logo">
+                    <span class="logo__accent">M</span>aria Silva
+                </a>
+                <p class="footer__tagline">
+                    Criando experiências digitais memoráveis.
+                </p>
+            </div>
+
+            <!-- Links de navegação do footer -->
+            <nav class="footer__nav" aria-label="Navegação do rodapé">
+                <h4 class="footer__title">Links</h4>
+                <ul class="footer__links">
+                    <li><a href="#sobre" class="footer__link">Sobre</a></li>
+                    <li><a href="#competencias" class="footer__link">Competências</a></li>
+                    <li><a href="#projetos" class="footer__link">Projetos</a></li>
+                    <li><a href="#contacto" class="footer__link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Redes sociais -->
+            <div class="footer__social">
+                <h4 class="footer__title">Redes Sociais</h4>
+                <ul class="social__list">
+                    <li>
+                        <a href="#" class="social__link" aria-label="GitHub">
+                            <span class="social__icon">🐱</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social__link" aria-label="LinkedIn">
+                            <span class="social__icon">💼</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social__link" aria-label="Twitter">
+                            <span class="social__icon">🐦</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social__link" aria-label="Instagram">
+                            <span class="social__icon">📷</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__copyright">
+                    © 2024 Maria Silva. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
